@@ -29,8 +29,8 @@ for i in range(height):
 
         #print(cell_list[i][j].value)
 
-for w in range(len(cell_list[0])):
-    print(cell_list[0][w].value)
+"""for w in range(len(cell_list[0])):
+    print(cell_list[0][w].value)"""
 
 
 def check_cell(start, target):
@@ -42,18 +42,19 @@ def check_cell(start, target):
     else:
         raise Exception("Cell check error")
 
-def check_directions(cell, cell_list):
+#                    tuple
+def check_directions(cell_position, cell_list):
     
 
-    # check North
-    for i in range(cell.coord[0] - 1):
-        #check_cell(cell_coord[0]
-        print(i)
+    # check West
+    print(cell_list[cell_position[0]][0].value)
                    
-    if cell.coord[0] > 0:
-        pass
+    """if cell_list[cell_position[0][cell_position[1]]].value > 0:
+        for i in range(cell.coord[0] - 1):
+            #check_cell(cell_list
+            print(i)"""
 
-#check_directions(
+check_directions((0,1), cell_list)
 
 """print(content[0][1], content[0][0])
 print(check_cell(content[0][1], content[0][0]))"""
