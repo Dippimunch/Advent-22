@@ -9,7 +9,7 @@ with open(filename) as f:
 height = len(content)
 width = len(content[0])
 
-first = np.zeros((height,width), dtype='int')
+#first = np.full_like((height,width))
 
 cell_list = []
 
@@ -19,11 +19,18 @@ class Cell:
         self.value = value
 
 for i in range(height):
+    cell_list.append([])
     for j in range(width):
         #first[i][j] = (content[i][j])
         cell = Cell((i,j), content[i][j])
-        cell_list.append(cell)
-        print(cell.coord, cell.value)
+        cell_list[i].append(cell)
+        #first[i][j] = cell
+        #print(cell.coord, cell.value)
+
+        #print(cell_list[i][j].value)
+
+for w in range(len(cell_list[0])):
+    print(cell_list[0][w].value)
 
 
 def check_cell(start, target):
@@ -39,15 +46,17 @@ def check_directions(cell, cell_list):
     
 
     # check North
-    for i in range(cell.coord[0]):
+    for i in range(cell.coord[0] - 1):
         #check_cell(cell_coord[0]
-        pass
+        print(i)
                    
     if cell.coord[0] > 0:
         pass
-        
-        
-        
+
+#check_directions(
+
+"""print(content[0][1], content[0][0])
+print(check_cell(content[0][1], content[0][0]))"""
 
 
 """for cell in cell_list:
