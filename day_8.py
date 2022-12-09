@@ -47,14 +47,15 @@ def check_directions(cell_position, cell_list):
     
 
     # check West
-    print(cell_list[cell_position[0]][0].value)
+    print(cell_list[cell_position[0]][cell_position[1]].value + 'a')
                    
-    """if cell_list[cell_position[0][cell_position[1]]].value > 0:
-        for i in range(cell.coord[0] - 1):
+    if int(cell_list[cell_position[0]][cell_position[1]].value) > 0:
+        #print("VISIBL")
+        for i in range(cell_position[1] - 1):
             #check_cell(cell_list
-            print(i)"""
+            print(i)
 
-check_directions((0,1), cell_list)
+check_directions((0,3), cell_list)
 
 """print(content[0][1], content[0][0])
 print(check_cell(content[0][1], content[0][0]))"""
